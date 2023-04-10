@@ -1,6 +1,7 @@
 mod api;
 mod model;
 mod repository;
+mod utils;
 
 use api::transactions;
 use api::helloworld;
@@ -27,7 +28,9 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             .service(transactions::get_transactions)
+            .service(transactions::get_transaction_by_id)
             .service(transactions::create_transaction)
+            .service(transactions::update_transaction)
             .service(helloworld::hello)
     })
     .bind(bind_address)?
