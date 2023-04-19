@@ -2,6 +2,8 @@
 ### Rogier Roex PXL
 ----
 #### Steps to run this application
+User interface available here(Electron): https://github.com/RogierRoexPXL/electron-app
+
 1. Create a .env file in project root folder with db connection values. Copy this into file, but change values for your db:
 ```
 PGHOST=icountant-postgres
